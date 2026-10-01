@@ -9,16 +9,20 @@ npm install
 npm run dev
 ```
 
-Open the URL Vite prints (default `http://localhost:5173`). Use **Run and Debug → Print Deck** after the dev server is running.
+Open `http://localhost:5173/demo` (or `/` for your saved printers). Use **Run and Debug → Print Deck** after the dev server is running.
 
-## GitHub Pages
+## Deploy (GitHub Pages)
+
+1. Set `base` in `vite.config.ts` to `"/<repo-name>/"` (e.g. `"/print-deck/"`) for a project site at `https://<user>.github.io/<repo-name>/`.
+2. In the repo on GitHub: **Settings → Pages → Build and deployment → Source**: branch **`gh-pages`**, folder **`/`** (root).
+3. From this folder:
 
 ```bash
-npm run build
+npm run deploy
 ```
 
-Upload `dist/` to Pages, or push `dist` to `gh-pages`. Set `base` in `vite.config.ts` if your site is served from a subpath (e.g. `/print-deck/`).
+That runs `build`, then pushes `dist/` to the `gh-pages` branch. You need git remotes set up and permission to push.
 
 ## Real printers from the browser
 
-Moonraker must allow your app origin in `[authorization] cors_domains` (see Moonraker docs). Otherwise use demo mode or run the app from a origin Moonraker already trusts.
+Moonraker must allow your app origin in `[authorization] cors_domains` (see Moonraker docs). Otherwise use `/demo` or run the app from an origin Moonraker already trusts.
