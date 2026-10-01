@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Print Deck (Chrome)",
+      "url": "http://localhost:5173/demo",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Print Deck (Edge)",
+      "url": "http://localhost:5173/demo",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}
